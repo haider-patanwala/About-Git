@@ -1,18 +1,18 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~STEP 0.1 ( 1st time setup)(did to let people know that these things are done by me and my email)
-Meet@LAPTOP-96UORJI6 MINGW64 ~/My VScode/Web_Dev/75-79_88_Dance_Website
-$ git config --global user.name Meet
+haider@LAPTOP-96UORJI6 MINGW64 ~/My VScode/Web_Dev/75-79_88_Dance_Website
+$ git config --global user.name haider
 ~~~~~~~~~~~~~~~~~~~~~git g~~~~~STEP 0.2
-Meet@LAPTOP-96UORJI6 MINGW64 ~/My VScode/Web_Dev/75-79_88_Dance_Website
-$git config --global user.email "meetmakwana20.@gmail.com"
+haider@LAPTOP-96UORJI6 MINGW64 ~/My VScode/Web_Dev/75-79_88_Dance_Website
+$git config --global user.email "haiderpatanwala@gmail.com"
 
 ~~~~~~~~~~~To know it is set up or not
-Meet@LAPTOP-96UORJI6 MINGW64 ~
+haider@LAPTOP-96UORJI6 MINGW64 ~
 $ git config --global user.name
-Meet
+haider
 
-Meet@LAPTOP-96UORJI6 MINGW64 ~
+haider@LAPTOP-96UORJI6 MINGW64 ~
 $ git config --global user.email
-meetmakwana20.@gmail.com
+haiderpatanwala@gmail.com
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~STEP 1 
 
@@ -158,12 +158,12 @@ SHORTHAND FOR CREATING AND ENTERING(SWITCHING TO IT) THE BRANCH AT THE SAME TIME
 $ git checkout -b newBranch
 
 TO SWITCH TO ANOTHER BRANCH
-Meet@LAPTOP-96UORJI6 MINGW64 ~/OneDrive/Desktop/New folder (master)
+haider@LAPTOP-96UORJI6 MINGW64 ~/OneDrive/Desktop/New folder (master)
 $ git checkout feature1
 
 Switched to branch 'feature1'
 
-Meet@LAPTOP-96UORJI6 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+haider@LAPTOP-96UORJI6 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
 $ git status
 
 On branch feature1
@@ -178,7 +178,7 @@ nothing to commit, working tree clean
 Make a repo on github with no files(no readme, etc)
 
 ON GIT BASH : TO CONNECT TO GITHUB'S REMOTE REPO WITH OUR LOCAL REPO
-$ git remote add origin git@github.com:meetmakwana19/about-git.git
+$ git remote add origin git@github.com:haider-patanwala/about-git.git
 MEANING A REMOTE NAMED "origin" IS ADDED AND OUR URL CAN BE CALLED AS "origin"
 
 TO SEE REMOTE
@@ -188,8 +188,8 @@ origin
 
 TO SEE URL 
 $git remote -v
-origin  git@github.com:meetmakwana19/about-git.git (fetch)
-origin  git@github.com:meetmakwana19/about-git.git (push)
+origin  git@github.com:haider-patanwala/about-git.git (fetch)
+origin  git@github.com:haider-patanwala/about-git.git (push)
 
 ------------------------------------
 NOW GITHUB IS NNOT LINKED WITH OUR PC 
@@ -210,9 +210,9 @@ SO TO PUSH THE REPPO TO GITHUB DO THE FOLLOWING
 
 6. Went to repo's "Code" tab and clicked on "Code v" green button and copied ssh  url 
 
-7. Copied the SSH url git@github.com:meetmakwana19/about-git.git
+7. Copied the SSH url git@github.com:haider-patanwala/about-git.git
 
-8. $ git remote set-url origin git@github.com:meetmakwana19/about-git.git
+8. $ git remote set-url origin git@github.com:haider-patanwala/about-git.git
 
 9. To finally push the "master" branch on "origin" url 
 
@@ -234,9 +234,9 @@ CLONE COMMAND
 
 3. In that folder's git bash will write 
 
-   $ git clone https://github.com/meetmakwana19/To-Do-List.git meet
-   where https is the link of repo to be cloned and "meet" is the folder name where the repo to be closed inside our opened folder.
+   $ git clone https://github.com/haider-patanwala/To-Do-List.git haider
+   where https is the link of repo to be cloned and "haider" is the folder name where the repo to be closed inside our opened folder.
 
-   $ git clone https://github.com/meetmakwana19/To-Do-List.git
-   *If "meet" folder name not given then a folder of repo's name will be created.
+   $ git clone https://github.com/haider-patanwala/To-Do-List.git
+   *If "haider" folder name not given then a folder of repo's name will be created.
 
