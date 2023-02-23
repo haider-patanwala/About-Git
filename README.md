@@ -214,9 +214,9 @@ TO CONNECT TO GITHUB'S REMOTE REPOSITORY WITH OUR LOCAL REPOSITORY(Folder on the
 
 
 ```bash
-git remote add origin git@github.com:haider-patanwala/about-git.git
+git remote add origin git@github.com:haider-patanwala/About-Git.git
 ```
-```git@github.com:haider-patanwala/about-git.git``` is the **SSH** link of the github repository on which we want to connect and upload our local repository.
+```git@github.com:haider-patanwala/About-Git.git``` is the **SSH** link of the github repository on which we want to connect and upload our local repository.
 MEANING A REMOTE NAMED ```origin``` IS ADDED AND OUR URL CAN BE CALLED AS ```origin```
 - TO SEE REMOTE
 ~~~bash 
@@ -233,8 +233,8 @@ git remote -v
 ```
 Output :
 ```bash
-origin  git@github.com:haider-patanwala/about-git.git (fetch)
-origin  git@github.com:haider-patanwala/about-git.git (push)
+origin  git@github.com:haider-patanwala/About-Git.git (fetch)
+origin  git@github.com:haider-patanwala/About-Git.git (push)
 ```
 
 
@@ -263,11 +263,11 @@ If things are not working out [check this](https://www.codewithharry.com/videos/
 
 6. Went to repo's "Code" tab and clicked on "Code 🔽" green button and copied ssh url. 
 
-7. Copied the SSH url which looks like ``` git@github.com:haider-patanwala/about-git.git ```
+7. Copied the SSH url which looks like ``` git@github.com:haider-patanwala/About-Git.git ```
 
 8. Have to set the Github's SSH url to the local machine 
 ```bash
-git remote set-url origin git@github.com:haider-patanwala/about-git.git
+git remote set-url origin git@github.com:haider-patanwala/About-Git.git
 ```
 
 9. To finally push the "master" branch on "origin" url 

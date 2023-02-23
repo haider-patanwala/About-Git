@@ -178,7 +178,7 @@ nothing to commit, working tree clean
 Make a repo on github with no files(no readme, etc)
 
 ON GIT BASH : TO CONNECT TO GITHUB'S REMOTE REPO WITH OUR LOCAL REPO
-$ git remote add origin git@github.com:haider-patanwala/about-git.git
+$ git remote add origin git@github.com:haider-patanwala/About-Git.git
 MEANING A REMOTE NAMED "origin" IS ADDED AND OUR URL CAN BE CALLED AS "origin"
 
 TO SEE REMOTE
@@ -188,8 +188,8 @@ origin
 
 TO SEE URL 
 $git remote -v
-origin  git@github.com:haider-patanwala/about-git.git (fetch)
-origin  git@github.com:haider-patanwala/about-git.git (push)
+origin  git@github.com:haider-patanwala/About-Git.git (fetch)
+origin  git@github.com:haider-patanwala/About-Git.git (push)
 
 ------------------------------------
 NOW GITHUB IS NNOT LINKED WITH OUR PC 
@@ -210,9 +210,9 @@ SO TO PUSH THE REPPO TO GITHUB DO THE FOLLOWING
 
 6. Went to repo's "Code" tab and clicked on "Code v" green button and copied ssh  url 
 
-7. Copied the SSH url git@github.com:haider-patanwala/about-git.git
+7. Copied the SSH url git@github.com:haider-patanwala/About-Git.git
 
-8. $ git remote set-url origin git@github.com:haider-patanwala/about-git.git
+8. $ git remote set-url origin git@github.com:haider-patanwala/About-Git.git
 
 9. To finally push the "master" branch on "origin" url 
 
