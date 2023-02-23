@@ -1,0 +1,242 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~STEP 0.1 ( 1st time setup)(did to let people know that these things are done by me and my email)
+Meet@LAPTOP-96UORJI6 MINGW64 ~/My VScode/Web_Dev/75-79_88_Dance_Website
+$ git config --global user.name Meet
+~~~~~~~~~~~~~~~~~~~~~git g~~~~~STEP 0.2
+Meet@LAPTOP-96UORJI6 MINGW64 ~/My VScode/Web_Dev/75-79_88_Dance_Website
+$git config --global user.email "meetmakwana20.@gmail.com"
+
+~~~~~~~~~~~To know it is set up or not
+Meet@LAPTOP-96UORJI6 MINGW64 ~
+$ git config --global user.name
+Meet
+
+Meet@LAPTOP-96UORJI6 MINGW64 ~
+$ git config --global user.email
+meetmakwana20.@gmail.com
+
+~~~~~~~~~~~~~~~~~~~~~~~~~STEP 1 
+
+$touch .gitignore
+-----------------"touch" creates a new blank file  of .gitignore
+
+edit the .gitignore file and add the name of the folder which we dont want to upload 
+
+~~~~~~~~~~~~~~~~~~~~~~~STEP 2
+> FYI : If we want to get a repo then 2 options,
+	1. git init(it initializes from start)
+	OR
+	2. clone (it clones a repo we want and clones it's whole data from server)
+
+$git init
+
+(will create a .git file, keep hidden files enable to see it)
+
+~~~~~~~~~~~~~~~~~~~~~~STEP 3
+> Very imp Flow of git - 
+
+	    Untracked file(On local device)----> Staged(filewhich we wish to put on git) <---|
+						    |					     |
+						    |	{ Commit }			     |
+						    v					     |
+					Unmodified file on git				     |
+			(Goes on git which we can edit/remove)[snapshot taken by git]	     |
+						    |					     |
+						    |  (If edited)			     |
+						    v					     |
+				          Modified file on git >------(Back to staging)------|
+
+$ git add .
+(to put all the contents at staging area, . means all)
+
+OR
+$ git add `filename`
+( if dont want to put all files then use syntax " git add `filename` ")
+
+OR
+$ git add -A
+( if want to put all the files at staging then "git add -A"
+
+*can check status now by 
+$ git status
+
+~~~~~~~~~~~~~~~~~~~~~~STEP 4
+
+--------git commit means taking a snapshot 
+----------so git add and git commit makes a snapshot associated to the changes we made
+----------but right now nothing is added to my repo so using "Initial commit"
+
+$ git commit ~~~~~~~~~~~~~~~~~~~~> if this command is executed then an editor will open then press "i" to edit and write the message "Initial commit" and then press "Esc" key and then type ":wq" to save and exit the file
+
+-------ALTERNATE EASY METHOD --------------
+$ git commit -m "Initial commit"
+
+-------I prefer :
+$ git commit -a -m "msg"
+(skips staging and directly commits)
+
+*********************************************Commit done, now Push remaining********************************************
+
+~~~~~~~~~~~~~~~~~~~~~~STEP 4
+
+To finally push the "master" branch on "origin" url 
+
+$ git push -u origin master
+
+(If once push -u origin is used then next time we just write "git push" which will by default push it the branch which was last commanded with "-u")
+
+-----------------------------------
+*TO RESTORE FILES FROM LAST COMMIT
+USED TO GET BACK THE LAST VERSION OF THE FILE IF SOMEONE HAS WRONGLY EDITED AND SAVED IT.
+ESSENTIALLY MATCHING WITH THE LAST COMMIT !!
+$ git checkout `filename`
+
+TO MATCH ALL THE FILES WITH LAST COMMIT AND CHANGE AND THEM ACCORDING TO THE LAST COMMIT !!
+$ git checkout -f
+
+-----------------------------------
+*LOGS
+TO GET LOG OF ALL OUR COMMITS
+$ git log
+
+TO FILTER OUT LOGS OF COMMITS
+(FOR EG. TO GET LAST 2 COMMITS, it also shows the changes)
+$ git log -p -2
+(press "q" to exit)
+
+-----------------------------------
+*COMPARISON
+WILL COMPARE AND SHOW THE DIFFERENCES BETWEEN THE CURRENT FILES(WORKING TREE) AND STAGED FILES
+$ git diff
+
+WILL COMPARE AND SHOW THE DIFFERENCES BETWEEN THE LAST COMMIT AND STAGED FILES
+$ git diff --staged
+
+------------------------------------
+TO DIRECTLY COMMIT BY SKIPPING STAGING AREA
+$ git commit -a -m "Skipped staging area and commited directly"
+
+------------------------------------
+WILL REMOVE THE FILE FROM LOCAL STORAGE & STAGING AREA
+$ git rm `filename`
+
+WILL REMOVE THE FILE FROM STAGING AREA ONLY, LOCAL ONE WILL REMAIN THE SAME
+$ git rm --cached `filename`
+
+------------------------------------
+SHORTHAND FOR STATUS
+$ git status -s
+MM  about.html(this will be in green meaning modified in staging area)(2nd M will be in red meaning modified in working tree)
+ M site.html (this will be in red meaning modified in working tree )
+?? waste.html
+
+------------------------------------
+.gitignore file ignores all the files which are even in the the folders
+
+SHOULD BE KNOWN : 
+1. TO IGNORE ALL THE FILE-TYPES(.log) ADD THIS IS IN .gitignore
+   eg: (.log)
+   *.log
+
+2. TO IGNORE A FOLDER USE A FORWAD SLASH
+   `folder_name`/
+
+Just commited,
+    $ git commit -a -m "Ignored some files nd added gitignore"
+
+------------------------------------
+BRANCH = Used to make a copy to work on differently
+
+BY DEFAULT, IT IS BRANCH "MASTER".
+
+TO CREATE A BRANCH
+$ git branch `name_of_branch`
+
+TO KNOW THE NAMES OF ALL BRANCHES:
+$ git branch
+
+SHORTHAND FOR CREATING AND ENTERING(SWITCHING TO IT) THE BRANCH AT THE SAME TIME
+$ git checkout -b newBranch
+
+TO SWITCH TO ANOTHER BRANCH
+Meet@LAPTOP-96UORJI6 MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git checkout feature1
+
+Switched to branch 'feature1'
+
+Meet@LAPTOP-96UORJI6 MINGW64 ~/OneDrive/Desktop/New folder (feature1)
+$ git status
+
+On branch feature1
+nothing to commit, working tree clean
+
+**Keep the file open and see the changes when switching between branches.
+
+---------------------------------------------------------------------------------------------------------------
+				GITHUB
+---------------------------------------------------------------------------------------------------------------
+
+Make a repo on github with no files(no readme, etc)
+
+ON GIT BASH : TO CONNECT TO GITHUB'S REMOTE REPO WITH OUR LOCAL REPO
+$ git remote add origin git@github.com:meetmakwana19/about-git.git
+MEANING A REMOTE NAMED "origin" IS ADDED AND OUR URL CAN BE CALLED AS "origin"
+
+TO SEE REMOTE
+$ git remote
+OUTPUT:
+origin
+
+TO SEE URL 
+$git remote -v
+origin  git@github.com:meetmakwana19/about-git.git (fetch)
+origin  git@github.com:meetmakwana19/about-git.git (push)
+
+------------------------------------
+NOW GITHUB IS NNOT LINKED WITH OUR PC 
+SO TO PUSH THE REPPO TO GITHUB DO THE FOLLOWING 
+
+1. Go to https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?utm_source=Blog to generate new ssh key.
+
+2. Paste the text below, substituting in your GitHub email address.
+   $ ssh-keygen -t ed25519 -C "your_email@example.com"
+
+3. To generate Agent pid
+   $ eval "$(ssh-agent -s)"
+
+4. To read the ssh key I went to the directory given by preious eval command and opened .pub file with notepad
+
+5. Copied the ssh key and added it as a new ssh key on Github's 
+   Acc settings > SSH Keys > New SSH Key(green button)
+
+6. Went to repo's "Code" tab and clicked on "Code v" green button and copied ssh  url 
+
+7. Copied the SSH url git@github.com:meetmakwana19/about-git.git
+
+8. $ git remote set-url origin git@github.com:meetmakwana19/about-git.git
+
+9. To finally push the "master" branch on "origin" url 
+
+   $ git push -u origin master
+
+   (If once push -u origin is used then next time we just write "git push" which will by default push it the branch which was last commanded with "-u")
+
+**************To push another branches on GitHub too,
+1. $ git checkout newBranch
+
+2. $ git push -u origin 
+
+------------------------------------
+CLONE COMMAND
+
+1. Making a new folder and opening git bash over there to clone into that folder.
+
+2. Will go to any public repo on Github and under code tab will copy the https link.
+
+3. In that folder's git bash will write 
+
+   $ git clone https://github.com/meetmakwana19/To-Do-List.git meet
+   where https is the link of repo to be cloned and "meet" is the folder name where the repo to be closed inside our opened folder.
+
+   $ git clone https://github.com/meetmakwana19/To-Do-List.git
+   *If "meet" folder name not given then a folder of repo's name will be created.
+
