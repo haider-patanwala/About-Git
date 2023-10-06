@@ -243,6 +243,7 @@ SO TO PUSH THE LOCAL REPO TO GITHUB DO THE FOLLOWING :**
 
 1. Go to this Github documentation by [clicking here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?utm_source=Blog) to generate new ssh key.
 
+(Open Git Bash if you're using windows then follow then enter these commands)
 
 2. Paste the text below, substituting in your GitHub email address.
    ```bash
@@ -254,9 +255,18 @@ SO TO PUSH THE LOCAL REPO TO GITHUB DO THE FOLLOWING :**
    eval "$(ssh-agent -s)"
    ```
 
+   and add the key
+   ```bash
+   ssh-add ~/.ssh/id_ed25519
+   ```
+
 If things are not working out [check this](https://www.codewithharry.com/videos/git-tut-beginners-hindi-5)
 
-4. To read the ssh key I went to the directory given by previous eval command and opened .pub file with notepad
+4. Use this command To read the ssh key or go to the directory given by previous eval command and opened .pub file with notepad
+
+   ```bash
+   clip < ~/.ssh/id_ed25519.pub
+   ```
 
 5. Copied the ssh key and added it as a new ssh key on Github's 
    Acc settings > SSH Keys > New SSH Key(green button).
